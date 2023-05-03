@@ -1,0 +1,199 @@
+:root {
+    --background: #FFFBEB;
+    --text: #251749;
+    --subText: #495579;
+    --other: #263159;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: var(--background);
+    margin: 0 80px;
+}
+
+aside {
+    max-width: 50vw;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background);
+    border-top: none;
+    border-bottom-left-radius: 16px;
+    border-end-end-radius: 16px;
+    transform: translateY(-350px);
+    transition: transform 1.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+aside.visible {
+    transform: translateY(-11px);
+    transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li a {
+    padding: 0 30px;
+    font-size: 4em;
+    color: var(--text);
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 900;
+    letter-spacing: 5px;
+    overflow: hidden;
+    background: linear-gradient(to right, #251749db, #251749db 50%, var(--text) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 0.8s ease;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-position: 0 100%;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: 5em;
+    color: var(--text);
+    font-family: 'Sigmar';
+    padding: 0 30px;
+}
+
+.name div {
+    width: 90px;
+    height: 4px;
+    background-color: var(--other);
+    border-radius: 50px;
+    cursor: pointer;
+    transform: translate(210px, 43px);
+    caret-color: transparent;
+}
+
+.about {
+    height: 65vh;
+    text-align: center;
+}
+
+.about p:first-child {
+    font-size: 15em;
+    font-family: 'Bebas Neue';
+    color: var(--text);
+    caret-color: transparent;
+}
+
+.about p:last-child {
+    font-size: 1.6em;
+    color: var(--subText);
+    margin-top: -50px;
+    line-height: 30px;
+    caret-color: transparent;
+}
+
+.project-1 {
+    grid-area: grid-1;
+    cursor: pointer;
+    
+}
+
+.project-2 {
+    grid-area: grid-2;
+}
+
+.project-3 {
+    grid-area: grid-3;
+}
+
+.project-4 {
+    grid-area: grid-4;
+}
+
+.project-5 {
+    grid-area: grid-5;
+}
+
+.project-6 {
+    grid-area: grid-6;
+}
+
+.project-7 {
+    grid-area: grid-7;
+}
+
+.project-8 {
+    grid-area: grid-8;
+}
+
+.project-9 {
+    grid-area: grid-9;
+}
+
+.project-10 {
+    grid-area: grid-10;
+}
+
+.project-11 {
+    grid-area: grid-11;
+}
+
+.project-12 {
+    grid-area: grid-12;
+}
+
+.project-title {
+    grid-area: grid-13;
+}
+
+.project-detail {
+    grid-area: grid-14;
+}
+
+.project {
+    display: grid;
+    grid-template-areas: 
+        'grid-1 grid-2 grid-3 grid-4'
+        'grid-5 grid-13 grid-13 grid-6'
+        'grid-7 grid-14 grid-14 grid-8'
+        'grid-9 grid-10 grid-11 grid-12';
+    gap: 30px;
+    height: 100vh;
+    padding: 10px 0;
+}
+
+.project > div {
+    width: 415px;
+    height: 235px;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+.project-title {
+    text-align: center;
+    font-size: 11em;
+    margin-top: 5px;
+    font-family: 'Bebas Neue';
+    color: var(--text);
+    caret-color: transparent;
+}
+
+.project-detail {
+    text-align: center;
+    font-size: 1.6em;
+    color: var(--subText);
+    /* margin-top: -30px; */
+    line-height: 30px;
+    caret-color: transparent;
+}
