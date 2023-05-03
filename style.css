@@ -13,12 +13,22 @@
     list-style: none;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
 body {
     background-color: var(--background);
     margin: 0 80px;
 }
 
 aside {
+    position: sticky;
+    top: 0;
     max-width: 50vw;
     margin: 0 auto;
     padding: 20px;
@@ -45,7 +55,7 @@ nav ul li a {
     padding: 0 30px;
     font-size: 4em;
     color: var(--text);
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 900;
     letter-spacing: 5px;
     overflow: hidden;
@@ -69,7 +79,7 @@ nav ul li a:hover {
     text-align: right;
     font-size: 5em;
     color: var(--text);
-    font-family: 'Sigmar';
+    font-family: 'Sigmar', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 0 30px;
 }
 
@@ -78,9 +88,9 @@ nav ul li a:hover {
     height: 4px;
     background-color: var(--other);
     border-radius: 50px;
-    cursor: pointer;
     transform: translate(210px, 43px);
     caret-color: transparent;
+    animation: lineMinMax 1s ease 3s infinite alternate;
 }
 
 .about {
@@ -90,23 +100,23 @@ nav ul li a:hover {
 
 .about p:first-child {
     font-size: 15em;
-    font-family: 'Bebas Neue';
+    font-family: 'Bebas Neue', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: var(--text);
     caret-color: transparent;
 }
 
 .about p:last-child {
-    font-size: 1.6em;
+    text-align: center;
+    font-size: 2em;
     color: var(--subText);
     margin-top: -50px;
     line-height: 30px;
     caret-color: transparent;
+    font-family: 'Unbounded', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .project-1 {
     grid-area: grid-1;
-    cursor: pointer;
-    
 }
 
 .project-2 {
@@ -168,14 +178,15 @@ nav ul li a:hover {
         'grid-5 grid-13 grid-13 grid-6'
         'grid-7 grid-14 grid-14 grid-8'
         'grid-9 grid-10 grid-11 grid-12';
-    gap: 30px;
+    grid-column-gap: 30px;
+    grid-row-gap: 15px;
     height: 100vh;
-    padding: 10px 0;
+    padding: 30px 0;
 }
 
 .project > div {
-    width: 415px;
-    height: 235px;
+    width: 418px;
+    height: 220px;
     text-align: center;
     background-color: aliceblue;
 }
@@ -184,7 +195,7 @@ nav ul li a:hover {
     text-align: center;
     font-size: 11em;
     margin-top: 5px;
-    font-family: 'Bebas Neue';
+    font-family: 'Bebas Neue', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: var(--text);
     caret-color: transparent;
 }
@@ -193,7 +204,21 @@ nav ul li a:hover {
     text-align: center;
     font-size: 1.6em;
     color: var(--subText);
-    /* margin-top: -30px; */
     line-height: 30px;
     caret-color: transparent;
+    font-family: 'Unbounded', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@keyframes lineMinMax {
+    0% {
+        width: 0;
+    } 25% {
+        width: 90px;
+    } 50% {
+        width: 18px;
+    } 75% {
+        width: 72px;
+    } 100% {
+        width: 54px;
+    }
 }
