@@ -1,8 +1,10 @@
 :root {
-    --background: #FFFBEB;
-    --text: #251749;
-    --subText: #495579;
-    --other: #263159;
+    --background: #525252;
+    --text: #414141;
+    --subText: #313131;
+    --other: #CA3E47;
+    --subTextFamily: 'Space Mono', monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --textFamily: 'Bebas Neue', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 * {
@@ -17,13 +19,14 @@
     display: none;
 }
 
-.cursor-pointer {
+.c-pointer {
     cursor: pointer;
 }
 
 body {
     background-color: var(--background);
     margin: 0 80px;
+    overflow-x: hidden;
 }
 
 aside {
@@ -35,7 +38,7 @@ aside {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(12px);
     border-bottom-left-radius: 16px;
     border-end-end-radius: 16px;
     transform: translateY(-372px);
@@ -57,11 +60,11 @@ nav ul li a {
     padding: 0 30px;
     font-size: 4em;
     color: var(--text);
-    font-family: 'Bebas Neue', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--textFamily);
     font-weight: 900;
     letter-spacing: 5px;
     overflow: hidden;
-    background: linear-gradient(to right, #251749db, #251749db 50%, var(--text) 50%);
+    background: linear-gradient(to right, var(--text), var(--subText) 50%, var(--text) 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -88,24 +91,26 @@ nav ul li a:hover {
 .aside-line {
     position: sticky;
     top: 25em;
-    width: 7px;
-    height: 90px;
+    width: 25px;
+    height: 25px;
     background-color: var(--other);
     border-radius: 50px;
-    transform: translate(114.2em, -50px);
+    transform: translate(113.4em, -25em);
     caret-color: transparent;
     /* animation: lineMinMax 1.2s ease infinite alternate; */
 }
 
 .about {
-    height: 65vh;
-    margin-top: -100px;
+    height: 100vh;
+    margin-top: -300px;
+    padding-top: 300px;
     text-align: center;
+    /* background-color: var(--other); */
 }
 
 .about p:first-child {
     font-size: 15em;
-    font-family: 'Bebas Neue', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--textFamily);
     color: var(--text);
     caret-color: transparent;
 }
@@ -117,7 +122,7 @@ nav ul li a:hover {
     margin-top: -50px;
     line-height: 30px;
     caret-color: transparent;
-    font-family: 'Space Mono', monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--subTextFamily);
 }
 
 .project-1 {
@@ -200,7 +205,7 @@ nav ul li a:hover {
     text-align: center;
     font-size: 11em;
     margin-top: 5px;
-    font-family: 'Bebas Neue', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--textFamily);
     color: var(--text);
     caret-color: transparent;
 }
@@ -211,7 +216,14 @@ nav ul li a:hover {
     color: var(--subText);
     line-height: 30px;
     caret-color: transparent;
-    font-family: 'Space Mono', monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--subTextFamily);
+}
+
+@media  screen and (max-width: 1400px) {
+    aside {
+        max-width: 70vw;
+        transform: translateY(-459px);
+    }
 }
 
 /* @keyframes lineMinMax {
