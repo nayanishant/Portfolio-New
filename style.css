@@ -25,7 +25,7 @@
 
 body {
     background-color: var(--background);
-    margin: 0 80px;
+    margin: 0 90px;
     overflow-x: hidden;
 }
 
@@ -89,15 +89,37 @@ nav ul li a:hover {
 }
 
 .aside-line {
-    position: sticky;
-    top: 25em;
-    width: 25px;
+    margin-top: 20px;
+    width: 55px;
     height: 25px;
-    background-color: var(--other);
-    border-radius: 50px;
-    transform: translate(113.4em, -25em);
-    caret-color: transparent;
-    /* animation: lineMinMax 1.2s ease infinite alternate; */
+    transform: translate(1766px, -374px);
+    position: fixed;
+}
+
+.bar {
+    display: block;
+    width: 100%;
+    height: 25%;
+    margin-top: 10%;
+    background: var(--other);
+    transition: 0.25s;
+    -webkit-transition: 0.25s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.animate .bar:nth-child(1) {
+    transform:translateY(16px) rotate(135deg);
+}
+
+.animate .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.animate .bar:nth-child(3) {
+    transform:translateY(-8px) rotate(-135deg);
 }
 
 .about {
@@ -105,7 +127,6 @@ nav ul li a:hover {
     margin-top: -300px;
     padding-top: 300px;
     text-align: center;
-    /* background-color: var(--other); */
 }
 
 .about p:first-child {
@@ -125,86 +146,11 @@ nav ul li a:hover {
     font-family: var(--subTextFamily);
 }
 
-.project-1 {
-    grid-area: grid-1;
-}
-
-.project-2 {
-    grid-area: grid-2;
-}
-
-.project-3 {
-    grid-area: grid-3;
-}
-
-.project-4 {
-    grid-area: grid-4;
-}
-
-.project-5 {
-    grid-area: grid-5;
-}
-
-.project-6 {
-    grid-area: grid-6;
-}
-
-.project-7 {
-    grid-area: grid-7;
-}
-
-.project-8 {
-    grid-area: grid-8;
-}
-
-.project-9 {
-    grid-area: grid-9;
-}
-
-.project-10 {
-    grid-area: grid-10;
-}
-
-.project-11 {
-    grid-area: grid-11;
-}
-
-.project-12 {
-    grid-area: grid-12;
-}
-
-.project-title {
-    grid-area: grid-13;
-}
-
-.project-detail {
-    grid-area: grid-14;
-}
-
-.project {
-    display: grid;
-    grid-template-areas: 
-        'grid-1 grid-2 grid-3 grid-4'
-        'grid-5 grid-13 grid-13 grid-6'
-        'grid-7 grid-14 grid-14 grid-8'
-        'grid-9 grid-10 grid-11 grid-12';
-    grid-column-gap: 30px;
-    grid-row-gap: 15px;
-    height: 100vh;
-    padding: 30px 0;
-}
-
-.project > div {
-    width: 418px;
-    height: 220px;
-    text-align: center;
-    background-color: aliceblue;
-}
-
 .project-title {
     text-align: center;
     font-size: 11em;
     margin-top: 5px;
+    margin-top: -50px;
     font-family: var(--textFamily);
     color: var(--text);
     caret-color: transparent;
@@ -217,6 +163,97 @@ nav ul li a:hover {
     line-height: 30px;
     caret-color: transparent;
     font-family: var(--subTextFamily);
+}
+
+.project-gallery {
+    column-count: 3;
+    --webkit-column-count: 3;
+    --moz-column-count: 3;
+    gap: 1rem;
+    padding: 4rem;
+}
+
+.gallery-item {
+    max-width: 500px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 8px ridge var(--subText);
+    height: auto;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: transform ease-in-out 300ms;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.08);
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) 450ms;
+}
+
+.gallery-item p {
+    font-size: 24px;
+    font-family: var(--subTextFamily);
+}
+
+.portfolio {
+    margin: 30px auto;
+    background-color: aliceblue;
+    padding: 20px;
+}
+
+.portfolio-top {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--other);
+}
+
+.portfolio-top h1 {
+    font-size: 120px;
+    color: var(--text);
+    font-family: 'Bruno Ace SC';
+}
+
+.portfolio-top span {
+    font-size: 36px;
+    color: var(--subText);
+    padding-bottom: 20px;
+}
+
+.portfolio section {
+    max-width: 40vw;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid red;
+}
+
+.portfolio section h3 {
+    font-size: 32px;
+}
+
+.social {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social a i {
+    font-size: 40px;
+    color: var(--subText);
+    cursor: pointer;
+}
+
+.social a i:hover {
+    text-shadow: 8px 8px var(--other);
 }
 
 @media  screen and (max-width: 1400px) {

@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Roboto:wght@100&family=Sigmar&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:wght@100&family=Roboto:wght@100&family=Sigmar&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="script.js"></script>
 </head>
@@ -25,10 +27,10 @@
                     <a href="#tab2">Projects</a>
                 </li>
                 <li>
-                    <a href="">Portfolio</a>
+                    <a href="#tab3">Portfolio</a>
                 </li>
                 <li>
-                    <a href="">Contact Me</a>
+                    <a href="#tab4">Contact Me</a>
                 </li>
             </ul>
             <div class="name">
@@ -37,27 +39,70 @@
             </div>
         </nav>
     </aside>
-    <div class="aside-line c-pointer" id="line"></div>
+    <div class="aside-line c-pointer" id="line">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
     <main>
         <div class="about" id="tab1">
             <p>Nishant Nayan</p>
             <p>I am a student pursuing Bachelor of Engineering with Information Science specialization in final year of college. My main interests is front-end, UI designing an development. I like to work in small to medium teams. I am a quick learner and specially good at risk management as well as problem solving.</p>
         </div>
         <div class="project" id="tab2">
-            <div class="project-1 c-pointer"></div>
-            <div class="project-2 c-pointer"></div>
-            <div class="project-3 c-pointer"></div>
-            <div class="project-4 c-pointer"></div>
-            <div class="project-5 c-pointer"></div>
-            <div class="project-6 c-pointer"></div>
-            <div class="project-7 c-pointer"></div>
-            <div class="project-8 c-pointer"></div>
-            <div class="project-9 c-pointer"></div>
-            <div class="project-10 c-pointer"></div>
-            <div class="project-11 c-pointer"></div>
-            <div class="project-12 c-pointer"></div>
             <p class="project-title">PROJECTS</p>
-            <p class="project-detail">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat similique sapiente eaque quo numquam non quos ea quis, dolore ipsum!</p>
+            <p class="project-detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, ut!</p>
+            <div class="project-gallery">
+                <div class="gallery-item">
+                    <img src="./Assets/susan-g-komen-3-day-wPVEHAQsYQw-unsplash.jpg" alt="nishant">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias commodi ex iste animi explicabo? Odit voluptates maxime explicabo nesciunt amet illo est nihil beatae ratione? Corrupti magnam voluptate qui cumque culpa, amet rerum, unde alias nulla quo quasi incidunt, perferendis officiis dolorem!</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="./Assets/susan-g-komen-3-day-wPVEHAQsYQw-unsplash.jpg" alt="nishant">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In perspiciatis adipisci aut minus rem iusto sunt sequi vero dolore laudantium quibusdam necessitatibus delectus esse quos quia modi consectetur, autem laborum!</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="./Assets/susan-g-komen-3-day-wPVEHAQsYQw-unsplash.jpg" alt="nishant">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias commodi ex iste animi explicabo? Odit voluptates maxime explicabo nesciunt amet illo est nihil beatae ratione? Corrupti magnam voluptate qui cumque culpa, amet rerum</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="./Assets/susan-g-komen-3-day-wPVEHAQsYQw-unsplash.jpg" alt="nishant">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In perspiciatis adipisci aut minus rem iusto sunt sequi vero dolore laudantium quibusdam necessitatibus delectus esse quos quia modi consectetur, autem laborum!</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="./Assets/susan-g-komen-3-day-wPVEHAQsYQw-unsplash.jpg" alt="nishant">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias commodi ex iste animi explicabo? Odit voluptates maxime explicabo nesciunt amet illo est nihil beatae ratione? Corrupti magnam voluptate qui cumque culpa, amet rerum, unde alias nulla quo quasi incidunt, perferendis officiis dolorem! Aliquam aliquid vero adipisci sint dolores cumque cupiditate.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="./Assets/susan-g-komen-3-day-wPVEHAQsYQw-unsplash.jpg" alt="nishant">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In perspiciatis adipisci aut minus rem iusto sunt sequi vero dolore laudantium quibusdam necessitatibus delectus esse quos quia modi consectetur, autem laborum!</p>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio" id="tab3">
+            <div class="portfolio-top">
+                <h1>Nishant Nayan</h1>
+                <span>Front-End UI  Developer</span>
+            </div>
+            <section>
+                <h3>Tools</h3>
+                <div>
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-css3"></i>
+                    <i class="fa-brands fa-js"></i>
+                    <i class="fa-brands fa-react"></i>
+                    <i class="fa-brands fa-figma"></i>
+                    <i class="fa-brands fa-github"></i>
+                    <img src="./Assets/jquery-icon.svg" alt="jQuery">
+                    <img src="./Assets/visual-studio-code-icon.svg" alt="VS Code">
+                </div>
+            </section>
+            <div class="social">
+                <a href=""  target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+                <a href=""  target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href=""  target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i></i></a>
+                <a href="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+            </div>
         </div>
     </main>
 </body>
