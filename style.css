@@ -29,6 +29,11 @@
     display: none;
 }
 
+.fa-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
 .c-pointer {
     cursor: pointer;
 }
@@ -197,12 +202,16 @@ nav ul li a:hover {
     font-family: var(--subTextFamily);
 }
 
-.project div i {
+.project .project-links {
     position: relative;
-    left: 27rem;
+    left: 25.3rem;
     top: -8px;
+}
+
+.project .project-links a {
     font-size: 1.4rem;
     color: var(--other);
+    margin-right: 4px;
 }
 
 .project-title span,
@@ -236,10 +245,8 @@ nav ul li a:hover {
     margin: 16px 0;
 }
 
-.portfolio section div i,
 .portfolio section div img {
-    width: 5rem;
-    font-size: 8rem;
+    width: 8rem;
 }
 
 .exp-title-wrapper {
@@ -312,7 +319,7 @@ footer div p {
     display: flex;
     border-radius: 42px;
     top: 22.5px;
-    right: 85px;
+    left: 8px;
 }
 
 .theme-btn {
@@ -324,10 +331,11 @@ footer div p {
     background-color: transparent;
 }
 
-.theme-btn img {
+.theme-btn i {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    font-size: 2rem;
 }
 
 .theme-btn.light {

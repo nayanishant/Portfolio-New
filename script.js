@@ -48,6 +48,10 @@ $(document).ready(function () {
         content: "VS Code",
     });
 
+    tippy('#bootstrap', {
+        content: "Bootstrap",
+    });
+
     $(".theme-btn.dark").click(function(){
       $(".toggle-circle").removeClass("move-left");
       $(".toggle-circle").toggleClass("move-right");
