@@ -306,6 +306,7 @@ footer div p {
     font-family: var(--subTextFamily);
 }
 
+/* Toggle button to change theme start */
 .toggle-container {
     position: fixed;
     display: flex;
@@ -360,6 +361,7 @@ button.toggle-circle {
   transform: translate(0px, 0px);
   transition: 1s ease all;
 }
+/* Toggle button to change theme end */
 
 @media  screen and (max-width: 600px) {
     aside {
