@@ -1,4 +1,14 @@
-:root {
+:root,
+:root.light {
+    --background: #FBF7F0;
+    --text: #414141;
+    --subText: #313131;
+    --other: #CA3E47;
+    --subTextFamily: 'Space Mono', monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --textFamily: 'Bebas Neue', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+:root.dark {
     --background: #525252;
     --text: #414141;
     --subText: #313131;
@@ -296,12 +306,87 @@ footer div p {
     font-family: var(--subTextFamily);
 }
 
-/* @media  screen and (max-width: 1400px) {
+.toggle-container {
+    position: fixed;
+    display: flex;
+    border-radius: 42px;
+    top: 22.5px;
+    right: 85px;
+}
+
+.theme-btn {
+    width: 2.3em;
+    height: 2.3em;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.theme-btn img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.theme-btn.light {
+    display: none;
+}
+
+.dark .theme-btn.dark {
+    display: none;
+}
+
+.dark .theme-btn.light {
+    display: block;
+}
+
+button.toggle-circle {
+    width: 72px;
+    height: 75px;
+    background: #e2e2e2;
+    border-radius: 42px;
+    position: absolute;
+    top: 2px;
+    left: 7px;
+}
+
+.move-right {
+  transform: translate(78px, 0px);
+  transition: 1s ease all;
+}
+
+.move-left {
+  transform: translate(0px, 0px);
+  transition: 1s ease all;
+}
+
+@media  screen and (max-width: 600px) {
     aside {
-        max-width: 70vw;
         transform: translateY(-459px);
     }
-} */
+
+    .aside-line {
+        transform: translate(595px, -209px);
+    }
+
+    .animate .bar:nth-child(1) {
+        transform: translateY(11px) rotate(135deg);
+    }
+
+    .name {
+        display: none;
+    }
+
+    .bar {
+        width: 68%;
+        height: 14%;
+    }
+
+    nav ul li a {
+        font-size: 2em;
+    }
+}
 
 /* @keyframes lineMinMax {
     0% {
