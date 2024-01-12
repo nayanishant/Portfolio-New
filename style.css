@@ -112,8 +112,9 @@ nav ul li a:hover {
     margin-top: 20px;
     width: 55px;
     height: 25px;
-    transform: translate(1766px, -374px);
     position: fixed;
+    top: 0;
+    right: 1rem;
 }
 
 .bar {
@@ -399,14 +400,14 @@ button.toggle-circle {
 }
 
 /* Media Query for Laptop Start */
-@media  screen and (min-width: 1200px) and (max-width: 1400px) {
+@media  screen and (max-width: 1536px) {
     aside {
         max-width: 60vw;
         transform: translateY(-457px);
     }
     
     .aside-line {
-        transform: translate(1383px, -371px);
+        right: 3.5rem;
     }
     
     .about {
