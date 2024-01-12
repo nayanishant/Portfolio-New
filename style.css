@@ -398,6 +398,29 @@ button.toggle-circle {
     }
 }
 
+/* Media Query for Laptop Start */
+@media  screen and (min-width: 1200px) and (max-width: 1400px) {
+    aside {
+        max-width: 60vw;
+        transform: translateY(-457px);
+    }
+    
+    .aside-line {
+        transform: translate(1383px, -371px);
+    }
+    
+    .about {
+        margin-top: -371px;
+    }
+    
+    .project section {
+        column-count: 2;
+        --webkit-column-count: 2;
+        --moz-column-count: 2;
+    }
+}
+/* Media Query for Laptop End */
+
 /* @keyframes lineMinMax {
     0% {
         height: 40px;
