@@ -375,7 +375,7 @@ footer div p {
 .loaderWrapper p {
     font-size: 30rem;
     font-family: 'Fredoka', sans-serif;
-    color: var(--background);
+    color: whitesmoke;
 }
 
 @media  screen and (max-width: 600px) {

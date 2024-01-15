@@ -75,7 +75,7 @@ function showLoader() {
 }
 
 function hideLoader() {
-    $(".loaderWrapper").fadeOut("fast")
+    $(".loaderWrapper").fadeOut("slow")
 }
 
 function setTheme(theme) {
