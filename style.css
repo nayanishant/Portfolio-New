@@ -372,6 +372,14 @@ button.toggle-circle {
 }
 /* Toggle button to change theme end */
 
+.toTop a {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: xx-large;
+    color: var(--other);
+}
+
 @media  screen and (max-width: 600px) {
     aside {
         transform: translateY(-459px);
