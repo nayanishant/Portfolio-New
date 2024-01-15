@@ -62,16 +62,21 @@ $(document).ready(function () {
       $(".toggle-circle").toggleClass("move-left");
     });
 
-    // $(window).resize(function() {
-    //     if ($(window).width() <= 600) {
-    //       $("body").addClass("mobile-view");
-    //     } else {
-    //       $("body").removeClass("mobile-view");
-    //     }
-    //   });
+    // Page Loader Start
+    showLoader();
+    setTimeout(function () {
+        hideLoader();
+    }, 500);
+    // Page Loader End
 })
 
+function showLoader() {
+    $(".loaderWrapper").fadeIn("fast")
+}
 
+function hideLoader() {
+    $(".loaderWrapper").fadeOut("fast")
+}
 
 function setTheme(theme) {
     document.documentElement.className = theme;

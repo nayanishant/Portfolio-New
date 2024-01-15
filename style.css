@@ -350,26 +350,6 @@ footer div p {
 .dark .theme-btn.light {
     display: block;
 }
-
-button.toggle-circle {
-    width: 72px;
-    height: 75px;
-    background: #e2e2e2;
-    border-radius: 42px;
-    position: absolute;
-    top: 2px;
-    left: 7px;
-}
-
-.move-right {
-  transform: translate(78px, 0px);
-  transition: 1s ease all;
-}
-
-.move-left {
-  transform: translate(0px, 0px);
-  transition: 1s ease all;
-}
 /* Toggle button to change theme end */
 
 .toTop a {
@@ -378,6 +358,24 @@ button.toggle-circle {
     right: 1rem;
     font-size: xx-large;
     color: var(--other);
+}
+
+.loaderWrapper {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    justify-content: center;
+    align-items: center;
+}
+
+.loaderWrapper p {
+    font-size: 30rem;
+    font-family: 'Fredoka', sans-serif;
+    color: var(--background);
 }
 
 @media  screen and (max-width: 600px) {
