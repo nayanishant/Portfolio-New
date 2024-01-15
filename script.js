@@ -66,16 +66,21 @@ $(document).ready(function () {
     showLoader();
     setTimeout(function () {
         hideLoader();
-    }, 500);
+    }, 1000);
     // Page Loader End
 })
 
 function showLoader() {
-    $(".loaderWrapper").fadeIn("fast")
+    $(".loaderWrapper").fadeIn("fast");
+    dotDelay()
 }
 
 function hideLoader() {
     $(".loaderWrapper").fadeOut("slow")
+}
+
+function dotDelay() {
+    $('.dot').fadeIn(1500);
 }
 
 function setTheme(theme) {

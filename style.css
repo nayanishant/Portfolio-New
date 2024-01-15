@@ -6,15 +6,17 @@
     --other: #CA3E47;
     --subTextFamily: 'Space Mono', monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     --textFamily: 'Bebas Neue', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --imgOpacity: 1;
 }
 
 :root.dark {
-    --background: #525252;
+    --background: #525252e6;
     --text: #414141;
     --subText: #313131;
     --other: #CA3E47;
     --subTextFamily: 'Space Mono', monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     --textFamily: 'Bebas Neue', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --imgOpacity: 0.8;
 }
 
 * {
@@ -248,6 +250,7 @@ nav ul li a:hover {
 
 .portfolio section div img {
     width: 8rem;
+    opacity: var(--imgOpacity);
 }
 
 .exp-title-wrapper {
@@ -374,7 +377,7 @@ footer div p {
 
 .loaderWrapper p {
     font-size: 30rem;
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'Fredoka';
     color: whitesmoke;
 }
 
