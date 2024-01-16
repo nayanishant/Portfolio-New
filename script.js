@@ -68,7 +68,25 @@ $(document).ready(function () {
         hideLoader();
     }, 1000);
     // Page Loader End
+
+    window.onscroll = function() {
+        toTop()
+    }
 })
+
+function toTop() {
+    let backToTop = $('.toTop')
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTop.css('display', 'block')
+    } else {
+        backToTop.css('display', 'none')
+    }
+}
+
+function moveToTop() {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+}
 
 function showLoader() {
     $(".loaderWrapper").fadeIn("fast");
@@ -106,3 +124,4 @@ window.addEventListener('DOMContentLoaded', () => {
       setTheme(savedTheme);
     }
 });
+

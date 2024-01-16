@@ -44,12 +44,13 @@ body {
     background-color: var(--background);
     margin: 0 88px;
     overflow-x: hidden;
+    position: absolute;
 }
 
 aside {
     position: sticky;
     top: 0;
-    max-width: 50vw;
+    width: 50vw;
     margin: 0 auto;
     padding: 20px;
     z-index: 1;
@@ -147,8 +148,9 @@ nav ul li a:hover {
 
 .about {
     height: 95vh;
-    margin-top: -371px;
-    padding-top: 300px;
+    position: relative;
+    top: -80px;
+    margin-top: unset;
     text-align: center;
 }
 
@@ -180,12 +182,11 @@ nav ul li a:hover {
 .project div {
     margin: 30px 20px;
     overflow: hidden;
-    max-width: 500px;
+    width: 500px;
 }
 
 .project div {
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(12px);
     border: 1px solid aliceblue;
@@ -222,6 +223,7 @@ nav ul li a:hover {
     font-size: 10.8rem;
     font-family: var(--textFamily);
     color: var(--text);
+    text-align: center;
 }
 
 .portfolio {
@@ -355,12 +357,14 @@ footer div p {
 }
 /* Toggle button to change theme end */
 
-.toTop a {
+.toTop {
+    display: none;
     position: fixed;
     bottom: 1rem;
     right: 1rem;
     font-size: xx-large;
     color: var(--other);
+    z-index: 999;
 }
 
 .loaderWrapper {
@@ -381,17 +385,28 @@ footer div p {
     color: whitesmoke;
 }
 
-@media  screen and (max-width: 600px) {
-    aside {
-        transform: translateY(-459px);
-    }
+/* Media Query for Mobile Start */
+@media  screen and (max-width: 480px) {
 
     .aside-line {
-        transform: translate(595px, -209px);
+        right: -0.3rem;
+        z-index: 1;
+    }
+
+    body {
+        margin: unset;
+    }
+
+    .theme-btn i {
+        font-size: 1.5rem;
     }
 
     .animate .bar:nth-child(1) {
         transform: translateY(11px) rotate(135deg);
+    }
+
+    main {
+        margin: 16px;
     }
 
     .name {
@@ -404,14 +419,105 @@ footer div p {
     }
 
     nav ul li a {
-        font-size: 2em;
+        font-size: 2.2em;
+    }
+
+    .project section {
+        display: flex;
+        flex-direction: column;
+        column-count: unset;
+        --webkit-column-count: unset;
+        --moz-column-count: unset;
+        padding: unset;
+    }
+
+    .portfolio section div img {
+        width: 4rem;
+    }
+
+    .project-title span,
+    .social-tab h3, 
+    .portfolio_body_wrapper section h3 {
+        font-size: 5rem;
+        text-align: center;
+    }
+
+    .project p, .project div {
+        width: 398px;
+    }
+
+    .project p {
+        text-align: center;
+    }
+
+    .project section div > p {
+        font-size: 16px;
+        padding: 0;
+        text-align: left;
+    }
+
+    .project .project-links {
+        position: relative;
+        left: 20rem;
+    }
+
+    .project .project-links a {
+        font-size: 1.2rem;
+    }
+
+    .about p:first-child {
+        font-size: 5em;
+    }
+
+    .about p:last-child {
+        font-size: 1em;
+        margin-top: -16px;
+        line-height: unset;
+    }
+
+    .about {
+        height: 95vh;
+        position: relative;
+        top: 0px;
+        margin-top: unset !important;
+        padding-top: 120px;
+    }
+
+    .exp-title-wrapper div p {
+        font-size: 0.76rem;
+    }
+
+    .exp_body div p {
+        font-size: 1.2rem;
+    }
+
+    .exp_body div ul li {
+        font-size: 0.9rem;
+    }
+
+    .social a i {
+        font-size: 24px;
+    }
+
+    footer div p {
+        font-size: 1rem;
+    }
+
+    .toTop {
+        right: 0.4rem;
+        font-size: x-large;
+    }
+
+    aside, aside.visible {
+        width: 100vw !important;
     }
 }
+/* Media Query for Mobile End */
 
 /* Media Query for Laptop Start */
 @media  screen and (max-width: 1536px) {
     aside {
-        max-width: 60vw;
+        width: 60vw;
         transform: translateY(-457px);
     }
     
