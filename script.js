@@ -103,7 +103,7 @@ function dotDelay() {
 
 function setTheme(theme) {
     document.documentElement.className = theme;
-    setCookie('theme', theme, 365); // Set the theme preference as a cookie with a one-year expiration
+    setCookie('theme', theme, 365);
 }
   
 function setCookie(name, value, days) {
@@ -117,7 +117,6 @@ function getCookie(name) {
     return cookieValue ? cookieValue.pop() : null;
 }
   
-  // Check if a theme is already set in the cookie when the page loads
 window.addEventListener('DOMContentLoaded', () => {
     const savedTheme = getCookie('theme');
     if (savedTheme) {
