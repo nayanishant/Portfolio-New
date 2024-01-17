@@ -149,8 +149,8 @@ nav ul li a:hover {
 .about {
     height: 95vh;
     position: relative;
-    top: -80px;
-    margin-top: unset;
+    top: -372px;
+    padding-top: 278px;
     text-align: center;
 }
 
