@@ -520,15 +520,21 @@ footer div p {
         width: 60vw;
         transform: translateY(-457px);
     }
-    
+
     .about {
-        margin-top: -371px;
+        height: 72vh;
+        top: -375px;
+        padding-top: 185px;
     }
     
     .project section {
         column-count: 2;
         --webkit-column-count: 2;
         --moz-column-count: 2;
+    }
+
+    .portfolio section div img {
+        width: 6rem;
     }
 }
 /* Media Query for Laptop End */
