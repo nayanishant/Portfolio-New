@@ -31,6 +31,11 @@
     display: none;
 }
 
+@font-face {
+    font-family: Fredoka;
+    src: url(./Assets/Fredoka-VariableFont_wdth\,wght.ttf);
+}
+
 .fa-disabled {
     opacity: 0.6;
     cursor: not-allowed;
@@ -381,7 +386,8 @@ footer div p {
 
 .loaderWrapper p {
     font-size: 30rem;
-    font-family: 'Fredoka';
+    font-family: Fredoka;
+    font-weight: 900;
     color: whitesmoke;
 }
 
@@ -535,6 +541,97 @@ footer div p {
 
     .portfolio section div img {
         width: 6rem;
+    }
+}
+
+
+@media  screen and (max-width: 1280px) {
+    body {
+        margin: unset;
+    }
+
+    .about {
+        height: 72vh;
+        top: -313px;
+        padding-top: 185px;
+        margin: 0 100px;
+    }
+
+    nav ul li a {
+        font-size: 3em;
+    }
+
+    .name {
+        font-size: 4em;
+    }
+    
+    .project section {
+        column-count: 2;
+        --webkit-column-count: 2;
+        --moz-column-count: 2;
+    }
+
+    .portfolio section div img {
+        width: 5rem;
+    }
+
+    .theme-btn i {
+        font-size: 1.5rem;
+    }
+
+    .bar {
+        width: 75%;
+        height: 16%;
+    }
+
+    .aside-line {
+        margin-top: 5px;
+        right: 0rem;
+    }
+
+    .toggle-container {
+        top: 8.5px;
+    }
+
+    .about p:first-child {
+        font-size: 10em;
+    }
+
+    .about p:last-child {
+        font-size: 1.6em;
+    }
+
+    .animate .bar:nth-child(1) {
+        transform: translateY(11px) rotate(135deg);
+    }
+
+    .exp_body div ul li {
+        font-size: 1.2rem;
+    }
+
+    .exp-title-wrapper div p {
+        font-size: 1.4rem;
+    }
+
+    .exp_body div p {
+        font-size: 1.7rem;
+    }
+
+    .portfolio_body_wrapper {
+        margin: 0 50px 0 20px;
+    }
+
+    .project section div p {
+        text-align: left;
+    }
+
+    .project .project-title, .project div {
+        width: 480px;
+        text-align: center;
+    }
+
+    .social a i {
+        font-size: 32px;
     }
 }
 /* Media Query for Laptop End */
